@@ -1,0 +1,10 @@
+ ul{
+    display: flex;
+    justify-content: space-around;
+ }
+
+ a{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
