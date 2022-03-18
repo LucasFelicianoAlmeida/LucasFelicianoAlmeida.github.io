@@ -1,10 +1,9 @@
 {
-  "name": "portfolio",
+  "name": "my-app",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --open",
-    "component": "ng g c nav-menu --module app",
+    "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

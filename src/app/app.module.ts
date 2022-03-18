@@ -8,7 +8,8 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 
 const routes: Route[] = 
 [
-  {path: 'home', component: HomeComponent }
+  {path: 'home', component: HomeComponent },
+  {path:'**',redirectTo:'home'},
 ]
 
 @NgModule({
