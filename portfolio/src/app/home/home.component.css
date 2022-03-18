@@ -1,0 +1,98 @@
+
+header{
+    padding:40px;
+    display: flex;
+    height: 100vh;
+    animation: transitionIn 3s;
+}
+
+@keyframes transitionIn
+{
+    from{
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1{
+    color: white;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 10rem;
+    letter-spacing: 1,8rem;
+    margin:0;
+}
+
+h3{
+    color: rgba(255,255,255,.7);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 1.1rem;
+    font-weight: 200;
+    letter-spacing: 1.11rem; 
+}
+.hero-txt
+{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content:center;
+    padding: 20px;
+    height: 100%;
+    width: 70%;
+}
+
+.hero-picture
+{
+    
+    height: 100%;
+    width: 30%;
+}
+
+.hero-container
+{
+    height: 70%;
+    width: 50%;
+}
+.hero
+{
+    padding:0;
+    border-radius:  12px;
+    background-image: url(../../assets/me1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition:  3s ease-in;
+}
+
+.line{
+    background-color: white;
+    width: 4px;
+    height: 70%;
+}
+
+.img{
+    background-image: url(../../assets/meColored.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+
+    filter: blur();
+    transition: 1.5s;
+    background-color: transparent;
+}
+
+.hero:hover{
+    clip-path: polygon(0 0, 60% 0, 60% 100%, 1% 100%);
+}
+.img:hover{
+    transform: translateX(-400px);
+
+}
