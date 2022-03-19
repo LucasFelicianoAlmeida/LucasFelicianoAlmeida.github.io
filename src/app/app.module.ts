@@ -9,6 +9,7 @@ import { NavMenuComponent } from './nav-menu/nav-menu.component';
 const routes: Route[] = 
 [
   {path: 'home', component: HomeComponent },
+  {path: '', component: HomeComponent},
   {path:'**',redirectTo:'home'},
 ]
 
