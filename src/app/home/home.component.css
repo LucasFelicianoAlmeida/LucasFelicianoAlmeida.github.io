@@ -1,6 +1,6 @@
 
 header{
-    padding:40px;
+    background-color: black;
     display: flex;
     height: 100vh;
     animation: transitionIn 3s;
@@ -34,22 +34,41 @@ h3{
     font-weight: 200;
     letter-spacing: 1.11rem; 
 }
+/* Hero */
 .hero-txt
 {
     display: grid;
-    justify-content: center;
+    justify-content: end;
     align-items: center;
     align-content:center;
-    padding: 20px;
     height: 100%;
-    width: 70%;
+    padding: 2rem;
+    width: 50%;
 }
 
 .hero-picture
 {
-    
+    display:flex;
+    align-items: center;
+    transform: scale(.5);
     height: 100%;
-    width: 30%;
+    width: 40%;
+}
+
+.hero-picture > img{
+    height: 30rem;
+    
+    animation: circleAnim 4s;
+    clip-path: circle(50% at 50% );
+}
+
+@keyframes circleAnim{
+    from{
+        clip-path: circle(0% at 0%);
+    }
+    to{
+        clip-path: circle(50% at 50% );
+    }
 }
 
 .hero-container
@@ -74,6 +93,7 @@ h3{
     background-color: white;
     width: 4px;
     height: 70%;
+    margin: 10rem 0;
 }
 
 .img{
@@ -94,5 +114,30 @@ h3{
 }
 .img:hover{
     transform: translateX(-400px);
+}
 
+.link-container{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 0;
+    top: 50%;
+    border-radius: 30px;
+    background-color: #3A3B3C;
+    padding: 4px;
+
+}
+
+.link-container > a > img
+{
+    height: 3rem;
+}
+
+
+
+/* Achivment */
+.achivment-section{
+    padding: 4rem;
+    height: 100vh;
+    background-color: #Efefef;
 }
