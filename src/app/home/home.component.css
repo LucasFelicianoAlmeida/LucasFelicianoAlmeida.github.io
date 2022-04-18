@@ -7,7 +7,7 @@ header{
 }
 
 .alert{
-    position: absolute;
+    position: fixed;
     right: -50px;
     top:40px;
     transform: rotate(45deg);
