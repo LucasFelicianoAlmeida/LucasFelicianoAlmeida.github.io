@@ -5,11 +5,13 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
+import { MyappsComponent } from './components/myapps/myapps.component';
 
 const routes: Route[] = 
 [
   {path: 'home', component: HomeComponent },
   {path: '', component: HomeComponent},
+  {path: 'myapps', component: MyappsComponent},
   {path:'**',redirectTo:'home'},
 ]
 
@@ -18,7 +20,8 @@ const routes: Route[] =
     AppComponent,
     HomeComponent,
     FooterComponent,
-    NavMenuComponent
+    NavMenuComponent,
+    MyappsComponent
   ],
   imports: [
     BrowserModule,
