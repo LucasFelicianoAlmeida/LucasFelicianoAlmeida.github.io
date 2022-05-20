@@ -6,7 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class TopicPipe implements PipeTransform {
 
   transform(value: number, ...args: unknown[]): unknown {
-    var topicsArray = [".NET","C#","Angular","ReactJS","Backend","FrontEnd","Xamarin Forms"]
+    var topicsArray = ["dotnet","C#","Angular","ReactJS","Backend","FrontEnd","xamarin"]
+
     return topicsArray[value];
   }
 

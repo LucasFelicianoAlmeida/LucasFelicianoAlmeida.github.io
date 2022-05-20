@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./pill.component.scss']
 })
 export class PillComponent implements OnInit {
-  @Input() Topic:number = 0
+  @Input() Topic:number = 0 
   constructor() { }
 
   ngOnInit(): void {
