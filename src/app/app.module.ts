@@ -6,6 +6,10 @@ import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { MyappsComponent } from './components/myapps/myapps.component';
+import { CardComponent } from './components/card/card.component';
+import { PillComponent } from './components/pill/pill.component';
+import { TopicPipe } from './pipes/topic/topic.pipe';
+import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 
 const routes: Route[] = 
 [
@@ -21,7 +25,11 @@ const routes: Route[] =
     HomeComponent,
     FooterComponent,
     NavMenuComponent,
-    MyappsComponent
+    MyappsComponent,
+    CardComponent,
+    PillComponent,
+    TopicPipe,
+    TopOfPageComponent
   ],
   imports: [
     BrowserModule,

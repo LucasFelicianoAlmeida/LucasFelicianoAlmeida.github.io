@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="header">
+        <h3>{{CardData!.title}}</h3>
+        <a [href]="CardData!.link" [class.isVisible]="CardData!.category == 0">Link</a>
+        <!-- <h3>{{CardData!.category}}</h3> -->
+    </div>
+
+    <div class="body">
+        <p>{{CardData!.description}}</p>
+    </div>
+    <div class="footer">
+        <app-pill *ngFor="let topic of  toArray(CardData!.topics)"   [Topic]="topic"></app-pill>
+    </div>
+</div>

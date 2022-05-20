@@ -1,6 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+@import './mixin';
+@import './colors';
+
 
 *{
+    scroll-behavior: smooth;
     margin:0;
     padding:0;
 }
@@ -14,11 +18,11 @@ li{
     list-style: none;
 }
 
-h2{
+h2
+{
     font-family: 'Bebas Neue', cursive;
     color: black;
     font-size: 3rem;
     letter-spacing: 0.3rem;
-
 }
 
