@@ -5,19 +5,29 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
-import { MyappsComponent } from './components/myapps/myapps.component';
+import { ProjectsComponent } from './components/projects/projects.component';
 import { CardComponent } from './components/card/card.component';
 import { PillComponent } from './components/pill/pill.component';
 import { TopicPipe } from './pipes/topic/topic.pipe';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
+import { SearchBarComponent } from './components/search-bar/search-bar.component';
+import { FormsModule } from '@angular/forms';
+import { LottieModule } from 'ngx-lottie'; // add this line
+
+
+export function playerFactory() { // add this line
+  return import('lottie-web'); // add this line
+} 
 
 const routes: Route[] = 
 [
   {path: 'home', component: HomeComponent },
   {path: '', component: HomeComponent},
-  {path: 'myapps', component: MyappsComponent},
+  {path: 'projects', component: ProjectsComponent},
   {path:'**',redirectTo:'home'},
 ]
+
+
 
 @NgModule({
   declarations: [
@@ -25,15 +35,18 @@ const routes: Route[] =
     HomeComponent,
     FooterComponent,
     NavMenuComponent,
-    MyappsComponent,
+    ProjectsComponent,
     CardComponent,
     PillComponent,
     TopicPipe,
-    TopOfPageComponent
+    TopOfPageComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    FormsModule,
+    RouterModule.forRoot(routes),
+    LottieModule.forRoot({ player: playerFactory, useWebWorker: true })
   ],
   providers: [],
   bootstrap: [AppComponent],

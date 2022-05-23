@@ -43,36 +43,73 @@
     <section id="aboutme-section">
         <h2>About Me</h2>
 
-        <div class="gridish">
-            <img class="imgResized" src="../../assets/LucasDeveloper.webp" />
-            <div class="content">
-                <p>A programmer that do not drink coffee☕. I've been developing since 2019 and since then always
-                    learning to be better.</p>
+        <div class="aboutme-grid">
+            <div class="aboutme-grid-lottiecontainer">
+                
+                <ng-lottie height="auto" [options]="options"></ng-lottie>
             </div>
+
+            <div class="aboutme-grid-content">
+                <p>The first software engineer that do not drink coffee☕. I've been developing since 2019 and since then always
+                    learning to be better and challenging myself.</p>
+                <div class="aboutme-grid-content-topics">
+                    <div class="aboutme-topics-img">
+                        <img src="../../assets/programming.svg" />
+                        <h3>Programming</h3>
+                    </div>
+                    <div class="aboutme-grid-content-topics-img">
+                        <img src="../../assets/social.svg" />
+                        <h3>Socializng</h3>
+                    </div>
+                    <div class="aboutme-grid-content-topics-img">
+                        <img src="../../assets/basketball.svg" />
+                        <h3>Sports</h3>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </section>
 
-    <section id="achivment-section">
-        <h2>Achivments#</h2>
-        <div class="gridish2">
-            <!-- <img class="imgResized" src="../../assets/spRj.jpg" *ngIf="indexCounter.Value"  />
-                <img class="imgResized" src="../../assets/meAndLidi.jpg"/> -->
+    <section class="achiviment">
+        <!-- <h2>Achivments#</h2> -->
+        <h2>Knoledge Olimpiad</h2>
+        <div class="achiviment-container">
+            <div class="achiviment-container-wrapper">
+                <div class="achiviment-container-wrapper-img1">
 
-
-            <div class="grid-container">
-                <img class="imgResized" src="../../assets/competition.png" />
-                <div class="content">
-                    <p>After graduating in Software Development I competed statwidely in <span ><a href="https://worldskills.org/what/competitions/wsc2022/">Software Solutions for Businness</a></span> category. I had the honor to win and represent São Paulo State in this category.</p>
+                </div>
+                <div class="achiviment-container-wrapper-content">
+                    <p>After graduating in Software Development I competed statwidely in <span><a
+                        href="https://worldskills.org/what/competitions/wsc2022/">Software Solutions for
+                        Businness</a></span> category. I had the honor to win and represent São Paulo State in
+                        this category.</p>
                 </div>
             </div>
-            <div class="grid-container">
-                <div class="content">
-                    <p>I trained during one year and a half to compete Nationaly against other 4 states of Brazil. The winner would compete at the same category in <span ><a href="https://worldskills.org/what/competitions/wsc2022/">WorldSkills Shanghai</a></span>.  The ending results came out, and I took 2nd place. </p>
+            <div class="achiviment-container-wrapper">
+                <div class="achiviment-container-wrapper-content">
+                    <p>I trained during one year and a half to compete Nationaly against other 4 states of Brazil. The
+                        winner would compete at the same category in <span><a
+                                href="https://worldskills.org/what/competitions/wsc2022/">WorldSkills
+                                Shanghai</a></span>. The ending results came out, and I took 2nd place. </p>
                 </div>
-                <img class="imgResized" src="../../assets/me.jpg"  />
-                <!-- <img class="imgResized" src="../../assets/meAndLidi.jpg"  /> -->
+                <div class="achiviment-container-wrapper-img2">
+
+                </div>
             </div>
+            <!-- <div class="achiviment-container-wrapper hidden" [class.hidden]="IndexCounter.value == 3">
+                <div class="achiviment-container-wrapper-img3">
+
+                </div>
+                <div class="achiviment-container-wrapper-content">
+                    <p>After graduating in Software Development I competed statwidely in <span><a
+                        href="https://worldskills.org/what/competitions/wsc2022/">Software Solutions for
+                        Businness</a></span> category. I had the honor to win and represent São Paulo State in
+                        this category.</p>
+                </div>
+            </div> -->
         </div>
     </section>
+
 </div>

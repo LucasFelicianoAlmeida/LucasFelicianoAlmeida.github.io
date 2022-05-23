@@ -2,7 +2,7 @@ export interface Card{
     title: string
     subtitle: string
     description: string
-    link: string
+    link: string 
     category: CategoryType
     topics: Array<TopicType>
 
@@ -24,5 +24,7 @@ export enum TopicType
     backend,
     frontend,
     xamarin,
+    sql,
+    sqlite
 
 }
