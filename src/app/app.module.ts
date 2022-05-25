@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
 import { LottieModule } from 'ngx-lottie';
 import { PillfilterComponent } from './components/pillfilter/pillfilter.component'; // add this line
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TestComponent } from './components/test/test.component';
 
 
 export function playerFactory() { // add this line
@@ -43,7 +44,8 @@ const routes: Route[] =
     TopicPipe,
     TopOfPageComponent,
     SearchBarComponent,
-    PillfilterComponent
+    PillfilterComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,

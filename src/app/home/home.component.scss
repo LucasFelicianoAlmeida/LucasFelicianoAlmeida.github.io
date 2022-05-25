@@ -256,18 +256,16 @@ h1 {
             &-topics {
 
                 display: flex;
+                align-items: center;
+                align-content: center;
                 justify-content: space-between;
+                margin: 4rem;
                 align-items: flex-end;
 
-                // &-img {
-                //     display: flex;
-                //     justify-content: center;
-                //     height: 150px;
-                //     align-items: center;
-                //     background-color: #a8dadc;
-                //     clip-path: circle();
 
-                // }
+                &-img{
+                    text-align: center;
+                }
 
                 img {
                     height: 100px;
