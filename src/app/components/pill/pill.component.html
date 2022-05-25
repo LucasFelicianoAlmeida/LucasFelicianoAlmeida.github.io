@@ -1,3 +1,5 @@
-<div class="container" [class]="Topic | topic">
+<div class="container" [class.pointer]="canBeSelected" [class]="Topic | topic" (click)="toggle()">
     <p>{{Topic | topic}}</p>
+
+    <i *ngIf="!isActive && canBeSelected" class="far fa-times-circle"></i>
 </div>

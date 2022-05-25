@@ -9,6 +9,6 @@
         <p>{{CardData!.description}}</p>
     </div>
     <div class="footer">
-        <app-pill *ngFor="let topic of  toArray(CardData!.topics)"   [Topic]="topic"></app-pill>
+        <app-pill *ngFor="let topic of  CardData!.topics"   [Topic]="topic"></app-pill>
     </div>
 </div>

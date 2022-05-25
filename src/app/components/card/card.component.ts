@@ -7,19 +7,19 @@ import { Card, CategoryType, TopicType} from '../../../models/models'
   styleUrls: ['./card.component.scss']
 })
 export class CardComponent implements OnInit {
-  @Input() CardData: Card | undefined
+  @Input() CardData: Card  | undefined
   constructor() { }
 
   ngOnInit(): void {
     
   }
 
-  toArray(array: Array<TopicType>)
-  {
-    array.forEach(a =>{
-      console.log(a)
-    })
-    return array
-  }
+  // toArray(array: Array<TopicType>)
+  // {
+  //   array.forEach(a =>{
+  //     console.log(a)
+  //   })
+  //   return array
+  // }
 
 }

@@ -28,3 +28,4 @@ export enum TopicType
     sqlite
 
 }
+

@@ -1,11 +1,26 @@
 
 .container
 {
+    display: flex;
+    justify-content: space-between;
     color: white;
+    font-family: 'Roboto', sans-serif;
     font-weight: 400;
     border-radius: 10px;
     padding: 4px 8px;
     margin: 0 4px;
+
+
+
+    p{
+        margin: 4px;
+    }
+
+
+
+    &.pointer{
+        cursor: pointer;
+    }
 
     &.xamarin{
     background-color: #0075C4;
@@ -21,6 +36,9 @@
     }
     &.backend{
         background-color: darkseagreen;
+    }
+    &.frontend{
+        background-color: chocolate;
     }
     &.CSharp{
         background-color: #8C7AA9;

@@ -12,7 +12,6 @@ export class TopOfPageComponent implements OnInit {
 
   @HostListener('window:scroll') onWindowScroll() {
     const yCordinate = this.viewportScroller.getScrollPosition()[1]
-    console.log(yCordinate)
     this.isShown = yCordinate > 150
   }
   

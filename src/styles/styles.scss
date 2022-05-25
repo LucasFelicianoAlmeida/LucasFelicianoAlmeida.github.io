@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import './mixin';
 @import './colors';
-@import '~font-awesome/css/font-awesome.min.css';
+@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
 *{
     scroll-behavior: smooth;

@@ -12,7 +12,9 @@ import { TopicPipe } from './pipes/topic/topic.pipe';
 import { TopOfPageComponent } from './components/top-of-page/top-of-page.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
-import { LottieModule } from 'ngx-lottie'; // add this line
+import { LottieModule } from 'ngx-lottie';
+import { PillfilterComponent } from './components/pillfilter/pillfilter.component'; // add this line
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 export function playerFactory() { // add this line
@@ -40,11 +42,13 @@ const routes: Route[] =
     PillComponent,
     TopicPipe,
     TopOfPageComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    PillfilterComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    FontAwesomeModule,
     RouterModule.forRoot(routes),
     LottieModule.forRoot({ player: playerFactory, useWebWorker: true })
   ],
