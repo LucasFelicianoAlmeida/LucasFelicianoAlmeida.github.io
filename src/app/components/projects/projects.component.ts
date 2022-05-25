@@ -49,8 +49,9 @@ export class ProjectsComponent implements OnInit {
 
           if (element.topics.includes(topics[j])) {
             console.log("Entrou")
-            this.Elements.push(element)
-            console.log(this.Elements)
+            if(!this.Elements.includes(element))
+              this.Elements.push(element)
+            // console.log(this.Elements)
             continue
           }
         }
