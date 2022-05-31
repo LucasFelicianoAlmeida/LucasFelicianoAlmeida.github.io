@@ -17,7 +17,8 @@ export class PillComponent implements OnInit {
   }
 
   public toggle(): void{
-    this.isActive = !this.isActive
+    console.log(this.isActive)
+   this.isActive = this.isActive == false ? true : false
     console.log(this.isActive)
     this.selected.emit({hasBeenSelected: !this.isActive, topic: this.Topic})
   }

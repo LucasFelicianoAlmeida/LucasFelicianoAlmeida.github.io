@@ -13,13 +13,12 @@ import { TopOfPageComponent } from './components/top-of-page/top-of-page.compone
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { FormsModule } from '@angular/forms';
 import { LottieModule } from 'ngx-lottie';
-import { PillfilterComponent } from './components/pillfilter/pillfilter.component'; // add this line
+import { PillfilterComponent } from './components/pillfilter/pillfilter.component'; 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { TestComponent } from './components/test/test.component';
 
 
-export function playerFactory() { // add this line
-  return import('lottie-web'); // add this line
+export function playerFactory() {
+  return import('lottie-web');
 } 
 
 const routes: Route[] = 
@@ -44,8 +43,7 @@ const routes: Route[] =
     TopicPipe,
     TopOfPageComponent,
     SearchBarComponent,
-    PillfilterComponent,
-    TestComponent
+    PillfilterComponent
   ],
   imports: [
     BrowserModule,

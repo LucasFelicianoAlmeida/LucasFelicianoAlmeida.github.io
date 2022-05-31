@@ -16,12 +16,20 @@ export class ProjectsComponent implements OnInit {
   ngOnInit(): void {
     this.Elements = [
       {
+        title: "Reactive Programming in Angular", subtitle: "On Github", description: "My tests in reactive programing in Angular. Using observables, promises, async pipe and rxgs. ", link: "https://github.com/lucass-teixeira/100-Angular-Challenges", category: CategoryType.App,
+        topics: [TopicType.angular, TopicType.frontend]
+      },
+      {
+        title: "My resumé", subtitle: "On Github", description: "This website was developed in Angular", link: "https://github.com/lucass-teixeira/lucass-teixeira.github.io", category: CategoryType.App,
+        topics: [TopicType.angular, TopicType.frontend]
+      },
+      {
         title: "The Watcher", subtitle: "teste", description: "Watcher is a daily habits diary that makes you more productive.", link: "https://play.google.com/store/apps/details?id=com.teixeiracompany.watcher", category: CategoryType.App,
         topics: [TopicType.xamarin, TopicType.dotnet, TopicType.cSharp, TopicType.sqlite]
       },
       {
         title: "100 Angular Challenges", subtitle: "On Github", description: "An angular course developing 100 challenges including components, pipes, services, reactive programing(rjxs) and more.", link: "https://github.com/lucass-teixeira/100-Angular-Challenges", category: CategoryType.App,
-        topics: [TopicType.angular]
+        topics: [TopicType.angular, TopicType.frontend]
       },
       {
         title: "ContosoPizza", subtitle: "On Github", description: "An asp net web api using mediator pattern and CQRS. This is an online pizza ordering backend system developed in Asp .NET web API.", link: "https://github.com/lucass-teixeira/ContosoPizza", category: CategoryType.App,
@@ -35,9 +43,19 @@ export class ProjectsComponent implements OnInit {
     this.copyElements = [...this.Elements]
   }
 
+  public search(searchText: string){
+    if(searchText.length > 0)
+    {
+      this.Elements = this.Elements.filter(x => x.title.toLowerCase().includes(searchText.toLowerCase()));
+    }
+    else{
+      this.Elements.splice(0, this.Elements.length)
+      this.Elements = [...this.copyElements]
+    }
+  }
+
   public filter(topics: number[]): void {
     this.Elements.splice(0, this.Elements.length)
-    console.log(`Elements Lenght ${this.Elements.length}`)
     if (topics.length > 0) {
 
       for (let i = 0; i < this.copyElements.length; i++) {
@@ -45,13 +63,10 @@ export class ProjectsComponent implements OnInit {
 
         for (let j = 0; j < topics.length; j++) {
           const topic = topics[j];
-          console.log(element)
 
           if (element.topics.includes(topics[j])) {
-            console.log("Entrou")
             if(!this.Elements.includes(element))
               this.Elements.push(element)
-            // console.log(this.Elements)
             continue
           }
         }
@@ -59,11 +74,8 @@ export class ProjectsComponent implements OnInit {
       }
     }
     else{
-      console.log("Empty")
-      console.log("Copy" + this.copyElements)
       this.Elements = [...this.copyElements]
     }
-    console.log(this.Elements)
   }
 
 }
