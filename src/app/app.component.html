@@ -1,4 +1,33 @@
-<app-nav-menu></app-nav-menu>
+<!-- <app-nav-menu></app-nav-menu>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
-<app-top-of-page></app-top-of-page>
+<app-top-of-page></app-top-of-page> -->
+<div class="home-wrapper">
+    <app-sidenav></app-sidenav>
+    <div class="home-header-container">
+        <div class="title-container">
+            <h1>My Name is <strong>Lucas Teixeira</strong></h1>
+            <h3>Frontend | Mobile • Developer</h3>
+        </div>
+        <div  class="technologies-container">
+            <app-card-home *ngFor="let l of learnings" [title]="l.title" [subTitle]="l.subtitle" [src]="l.img"></app-card-home>
+        </div>
+        <div class="header-detail-container">
+            <svg xmlns="http://www.w3.org/2000/svg" width="430" height="488" viewBox="0 0 430 488" fill="none">
+                <path d="M0 110C0 49.2487 49.2487 0 110 0H430V488H0V110Z" fill="url(#paint0_linear_14_20)" />
+                <defs>
+                    <linearGradient id="paint0_linear_14_20" x1="215" y1="0" x2="215" y2="488"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#020024" />
+                        <stop offset="0.552083" stop-color="#090979" stop-opacity="0.5" />
+                        <stop offset="1" stop-color="#00CBF6" stop-opacity="0.5" />
+                    </linearGradient>
+                </defs>
+            </svg>
+            
+
+            <div class="my-image">
+            </div>
+        </div>
+    </div>
+</div>

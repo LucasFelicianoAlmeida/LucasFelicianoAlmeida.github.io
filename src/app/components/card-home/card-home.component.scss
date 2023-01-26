@@ -1,0 +1,28 @@
+.card-container{
+    display: flex;
+    justify-content: space-around;
+    width: 200px;
+    background-color: #F9EEEE;
+    padding: .4rem .4rem;
+    border-radius: 6px;
+    box-shadow: 0.063rem  0 1.25rem 0 #8690a3;
+
+    img{
+        align-self: flex-start;
+       height: 80px;
+       width: 80px; 
+    }
+
+    .title-container{
+        display: grid;
+        align-content: center;
+        vertical-align: center;
+        margin-left: 10px;
+
+        p.subtitle
+        {
+            font-size: .9rem;
+            opacity: .5;
+        }
+    }
+}

@@ -1,0 +1,60 @@
+.home-wrapper {
+    .home-header-container {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        height: 100vh;
+
+        .title-container {
+            margin-top: 35vh;
+
+            h1 {
+                font-size: 2rem;
+                font-weight: 500;
+                letter-spacing: .22rem;
+            }
+
+            strong {
+                color: #2363C2;
+            }
+
+            h3 {
+                margin-top: .7rem;
+                opacity: .7;
+                font-size: 1.5rem;
+                font-weight: 400;
+                letter-spacing: .4rem;
+            }
+        }
+
+        .header-detail-container {
+            align-self: center;
+            height: 400px;
+            width: 200px;
+
+            .my-image {
+                position: relative;
+                top: -120%;
+                left: 0;
+                width: 430px;
+                height: 488px;
+                background: url('../assets/me-nobackground.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+    }
+}
+
+
+.technologies-container{
+    display: flex;
+    flex-direction: column;
+
+    app-card-home{
+        margin-top: 2.5rem; 
+        // border: 2px solid red;
+    }
+}
