@@ -28,13 +28,40 @@
         }
 
         .header-detail-container {
+            position: relative;
             align-self: center;
-            height: 400px;
-            width: 200px;
+            height: fit-content;
+            width: fit-content;
+
+
+            .technologies-container {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                right: 80%;
+                bottom: 10%;
+
+                app-card-home {
+                    margin-top: 2.5rem;
+                    z-index: 1;
+                    transition: all .3 cubic-bezier();
+
+                }
+
+                ::ng-deep {
+                    app-card-home:hover {
+                        .card-container {
+                            background-color: #38393D;
+                            color: #fff;
+                        }
+                    }
+                }
+            }
 
             .my-image {
-                position: relative;
-                top: -120%;
+                position: absolute;
+                top: 0;
+                z-index: 0;
                 left: 0;
                 width: 430px;
                 height: 488px;
@@ -45,16 +72,5 @@
             }
         }
 
-    }
-}
-
-
-.technologies-container{
-    display: flex;
-    flex-direction: column;
-
-    app-card-home{
-        margin-top: 2.5rem; 
-        // border: 2px solid red;
     }
 }
