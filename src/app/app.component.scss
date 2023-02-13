@@ -1,76 +1,181 @@
+@import '../styles/mixin';
+
+// .home-wrapper {
+//     .home-header-container {
+//         display: flex;
+//         justify-content: space-evenly;
+//         width: 100%;
+//         height: 100vh;
+
+//         .title-container {
+//             margin-top: 35vh;
+
+//             strong {
+//                 color: #2363C2;
+//             }
+
+//             h1 {
+//                 font-size: 2rem;
+//                 font-weight: 500;
+//                 letter-spacing: .22rem;
+//             }
+
+
+
+//             h3 {
+//                 margin-top: .7rem;
+//                 opacity: .7;
+//                 font-size: 1.5rem;
+//                 font-weight: 400;
+//                 letter-spacing: .4rem;
+//             }
+//         }
+
+//         .header-detail-container {
+//             position: relative;
+//             align-self: center;
+//             height: fit-content;
+//             width: fit-content;
+
+
+
+
+//             .my-image {
+//                 position: absolute;
+//                 top: 0;
+//                 z-index: 0;
+//                 left: 0;
+//                 width: 430px;
+//                 height: 488px;
+//                 background: url('../assets/me-nobackground.png');
+//                 background-size: cover;
+//                 background-repeat: no-repeat;
+//                 background-position: center;
+//             }
+//         }
+
+//     }
+// }
+
+// .technologies-container {
+//     display: none;
+// }
+
+// @media (min-width: 768px) {
+
+//     .technologies-container {
+//         display: flex;
+//         flex-direction: column;
+//         position: absolute;
+//         right: 80%;
+//         bottom: 10%;
+
+//         app-card-home {
+//             margin-top: 2.5rem;
+//             z-index: 1;
+//             transition: all .3 cubic-bezier();
+
+//         }
+
+//         ::ng-deep {
+//             app-card-home:hover {
+//                 .card-container {
+//                     background-color: #38393D;
+//                     color: #fff;
+//                 }
+//             }
+//         }
+//     }
+// }
+
 .home-wrapper {
-    .home-header-container {
-        display: flex;
-        justify-content: space-evenly;
-        width: 100%;
-        height: 100vh;
 
-        .title-container {
-            margin-top: 35vh;
+    &-header {
 
-            h1 {
-                font-size: 2rem;
-                font-weight: 500;
-                letter-spacing: .22rem;
-            }
+        &-nav {
+            padding: .4rem;
 
-            strong {
-                color: #2363C2;
-            }
-
-            h3 {
-                margin-top: .7rem;
-                opacity: .7;
-                font-size: 1.5rem;
-                font-weight: 400;
-                letter-spacing: .4rem;
-            }
-        }
-
-        .header-detail-container {
-            position: relative;
-            align-self: center;
-            height: fit-content;
-            width: fit-content;
-
-
-            .technologies-container {
+            .logo-container {
                 display: flex;
-                flex-direction: column;
-                position: absolute;
-                right: 80%;
-                bottom: 10%;
+                align-items: center;
+                width: 100%;
 
-                app-card-home {
-                    margin-top: 2.5rem;
-                    z-index: 1;
-                    transition: all .3 cubic-bezier();
 
+                .logo {
+                    width: 3rem;
+                    border-radius: 0.313rem;
+                    padding: 0.1rem;
+                    font-size: 16px;
+                    font-weight: 800;
                 }
 
-                ::ng-deep {
-                    app-card-home:hover {
-                        .card-container {
-                            background-color: #38393D;
-                            color: #fff;
-                        }
-                    }
+                .logo-text {
+                    margin-left: 1.5rem;
+                    font-size: 24px;
+                    font-weight: 700;
+                    color: #fff;
                 }
-            }
-
-            .my-image {
-                position: absolute;
-                top: 0;
-                z-index: 0;
-                left: 0;
-                width: 430px;
-                height: 488px;
-                background: url('../assets/me-nobackground.png');
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center;
             }
         }
+
+        &-container {
+            @include responsive-width();
+            display: grid;
+            justify-content: center;
+            align-content: center;
+
+            &-title {
+                padding: 1rem 0;
+                text-align: center;
+
+                strong {
+                    color: #2363C2;
+                }
+
+                h1 {
+                    font-size: 1.3rem;
+                    font-weight: 500;
+                }
+
+                h3 {
+                    margin-top: .5rem;
+                    opacity: .7;
+                    font-size: 1.1rem;
+                    font-weight: 400;
+                }
+            }
+
+            .main-img-container {
+                position: relative;
+                width: 250px;
+                height: 300px;
+
+                .img-rectangle {
+                    position: absolute;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                }
+
+                .img-me-header {
+                    position: absolute;
+                    background-image: url('../assets/me-nobackground.png');
+                    background-size: cover;
+                    width: 250px;
+                    height: 300px;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+
+    &-content {
+        @include responsive-width();
+        margin-top: 4rem;
 
     }
 }

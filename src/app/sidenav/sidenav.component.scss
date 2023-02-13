@@ -1,20 +1,21 @@
-.sidenav{
+.sidenav {
     background-color: #262326;
     position: fixed;
     top: 0;
     z-index: 1;
-    width:5rem;
+    width: 5rem;
     height: 100vh;
-    box-shadow: 0.063rem  0 1.25rem 0 #8690a3;
+    box-shadow: 0.063rem 0 1.25rem 0 #8690a3;
     transition: .3s all;
 
-    .logo-container{
+    .logo-container {
         display: flex;
         align-items: center;
-        padding: 0.938rem 0.938rem 0 0.938rem;
+        justify-content: center;
+        padding: 0.1rem 0.1rem 0 0.1rem;
         width: 100%;
 
-        .logo{
+        .logo {
             background-color: #fff;
             text-align: center;
             width: 3rem;
@@ -26,16 +27,16 @@
             border: none;
 
         }
-        
+
         .logo-text {
-            margin-left:1.5rem;
+            margin-left: 1.5rem;
             font-size: 24px;
             font-weight: 700;
             color: #fff;
         }
 
-        .btn-close{
-            margin-left:auto;
+        .btn-close {
+            margin-left: auto;
             cursor: pointer;
             width: 2rem;
             height: 2rem;
@@ -43,7 +44,7 @@
             background-color: transparent;
             border: none;
 
-            .fa-times{
+            .fa-times {
                 color: #fff;
                 font-size: 24px;
             }
@@ -51,13 +52,15 @@
     }
 }
 
-.sidenav-collapsed{
+.sidenav-collapsed {
     width: 16.5625rem;
 }
 
-.sidenav-nav{
+
+
+.sidenav-nav {
     list-style: none;
-    padding:0.938rem;
+    padding: 0.938rem;
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -65,22 +68,56 @@
     height: calc(100% - 3.65rem);
     cursor: pointer;
 
-    .sidenav-nav-item{
+    .sidenav-nav-item {
         width: 100%;
         margin-bottom: 0.652rem;
 
-        .sienav-nav-link{
-            display: flex; 
+        .sienav-nav-link {
+            display: flex;
             align-items: center;
             height: 3rem;
             color: #f3f3f3;
             text-decoration: none;
             transition: color .3s ease;
 
-            .sidenav-nav-icon{
+            .sidenav-nav-icon {
                 font-size: 22px;
-                
+
             }
         }
     }
+}
+
+@media (max-width: 425px) {
+    .sidenav {
+        width: 3rem;
+    }
+
+    .sidenav-collapsed {
+        width: 100vh;
+    }
+
+    .logo-container {
+        display: flex;
+        align-items: center;
+        padding: 0.938rem 0.938rem 0 0.938rem;
+        width: 100%;
+
+        .logo {
+            width: 3rem;
+            border-radius: 0.313rem;
+            padding: 0.1rem;
+            font-size: 16px;
+            font-weight: 800;
+        }
+
+        .logo-text {
+            margin-left: 1.5rem;
+            font-size: 24px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+
+    .sidenav-nav {}
 }

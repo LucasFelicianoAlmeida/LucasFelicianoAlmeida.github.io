@@ -2,18 +2,21 @@
 <router-outlet></router-outlet>
 <app-footer></app-footer>
 <app-top-of-page></app-top-of-page> -->
-<div class="home-wrapper">
+
+
+<!-- <div class="home-wrapper">
     <app-sidenav></app-sidenav>
     <div class="home-header-container">
         <div class="title-container">
             <h1>My Name is <strong>Lucas Teixeira</strong></h1>
             <h3>Frontend | Mobile • Developer</h3>
         </div>
-        
+
         <div class="header-detail-container">
             <div  class="technologies-container">
                 <app-card-home *ngFor="let l of learnings" [title]="l.title" [subTitle]="l.subtitle" [src]="l.img" [transform]="l.style"></app-card-home>
             </div>
+            <img href="../assets/rectangle.svg"/>
             <svg xmlns="http://www.w3.org/2000/svg" width="430" height="488" viewBox="0 0 430 488" fill="none">
                 <path d="M0 110C0 49.2487 49.2487 0 110 0H430V488H0V110Z" fill="url(#paint0_linear_14_20)" />
                 <defs>
@@ -25,10 +28,41 @@
                     </linearGradient>
                 </defs>
             </svg>
-            
+
 
             <div class="my-image">
             </div>
         </div>
+    </div>
+
+    <div class="projects-container">
+
+    </div>
+</div> -->
+
+<div class="home-wrapper">
+    <div class="home-wrapper-header">
+        <div class="home-wrapper-header-nav">
+            <div class="logo-container">
+                <button class="logo">LT</button>
+            </div>
+        </div>
+        <div class="home-wrapper-header-container">
+            <div class="main-img-container">
+                <img src="../assets/rectangle.svg" class="img-rectangle" />
+                <!-- <img src="../assets/me-nobackground.png" class="img-me-header" /> -->
+                <div class="img-me-header">
+                </div>
+            </div>
+        </div>
+        <div class="home-wrapper-header-container-title">
+            <h1>My Name is <strong>Lucas Teixeira</strong></h1>
+            <h3>Frontend | Mobile • Developer</h3>
+        </div>
+
+    </div>
+
+    <div class="home-wrapper-content">
+        <h3>Portfólio</h3>
     </div>
 </div>
