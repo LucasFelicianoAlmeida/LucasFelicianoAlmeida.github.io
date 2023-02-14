@@ -1,0 +1,31 @@
+<div class="card-container">
+    <div class="card-container-header">
+        <h1 class="title">{{project?.title}}</h1>
+    </div>
+
+    <div class="card-container-content">
+        <p class="description">{{project.description}}</p>
+        <div class="card-container-content-wrapper">
+            <div>
+                <img *ngFor="let i of project.imgs" class="card-container-content-wrapper-img" [src]="i.imgURL">
+            </div>
+
+            <div class="card-container-content-wrapper-actions">
+                <a [href]="project.link">link</a>
+                <i *ngIf="project.githubURL" class="fab fa-github"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card-container-footer">
+        <div style="display: flex">
+            <div *ngFor="let card of project.cards; index as i">
+                <ng-container *ngIf="i <= 1">
+                    <app-pill [Topic]="card"></app-pill>
+                </ng-container>
+            </div>
+        </div>
+        <div *ngIf="project.cards.length > 1"><i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+</div>

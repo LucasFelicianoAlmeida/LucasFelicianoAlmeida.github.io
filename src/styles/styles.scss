@@ -4,33 +4,49 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
-*{
+* {
     scroll-behavior: smooth;
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #F6F5F5;
-    .container{
+
+    .container {
         max-width: 1200px;
         margin: 0 auto;
     }
-    
-    li{
+
+    li {
         list-style: none;
     }
-    
-    h2
-    {
+
+    h2 {
         font-family: 'Bebas Neue', cursive;
         color: black;
-        font-size: 3rem;    
+        font-size: 3rem;
         letter-spacing: 0.3rem;
     }
 }
 
+:root {
+    --primary-color: #fff;
+    --title-color: #000;
+    --secondary: #0189AB;
+    --text: #3b3838;
+    --whiteA: #EFEFEF;
+    --blakA: #000;
+}
 
+
+.darkMode:root {
+    --primary-color: #2D2D2A;
+    --title-color: #fff;
+    --text: EFEFEF;
+    --whiteA: #EFEFEF;
+    --blakA: #000;
+}

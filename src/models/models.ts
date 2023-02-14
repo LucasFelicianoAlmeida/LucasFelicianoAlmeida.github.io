@@ -5,7 +5,6 @@ export interface Card{
     link: string 
     category: CategoryType
     topics: Array<TopicType>
-
 }
 
 export enum CategoryType

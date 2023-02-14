@@ -17,6 +17,7 @@ import { PillfilterComponent } from './components/pillfilter/pillfilter.componen
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CardHomeComponent } from './components/card-home/card-home.component';
+import { CardProjectComponent } from './components/card-project/card-project.component';
 
 
 export function playerFactory() {
@@ -47,7 +48,8 @@ const routes: Route[] =
     SearchBarComponent,
     PillfilterComponent,
     SidenavComponent,
-    CardHomeComponent
+    CardHomeComponent,
+    CardProjectComponent
   ],
   imports: [
     BrowserModule,

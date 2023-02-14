@@ -46,6 +46,13 @@
             <div class="logo-container">
                 <button class="logo">LT</button>
             </div>
+            <div class="home-wrapper-header-nav-title">
+                <h3>{{developerMode ? 'Developer mode🔥' : 'Chill mode💆🏽‍♂️'}}</h3>
+            </div>
+            <div class="theme-container">
+                <i *ngIf="!developerMode" (click)="toggle()" class="fa-solid fa-toggle-off"></i>
+                <i *ngIf="developerMode" (click)="toggle()"  class="fa-solid fa-toggle-on"></i>
+            </div>
         </div>
         <div class="home-wrapper-header-container">
             <div class="main-img-container">
@@ -63,6 +70,14 @@
     </div>
 
     <div class="home-wrapper-content">
-        <h3>Portfólio</h3>
+        <h3>Projects</h3>
+        <ng-container *ngFor="let p of projects">
+            <app-card-project [project]="p"></app-card-project>
+        </ng-container>
+    </div>
+    <div class="home-wrapper-footer">
+    </div>
+
+    <div class="home-wrapper-modal">
     </div>
 </div>

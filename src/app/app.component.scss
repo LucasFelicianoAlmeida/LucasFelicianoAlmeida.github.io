@@ -89,17 +89,18 @@
 // }
 
 .home-wrapper {
+    background-color: var(--primary-color);
 
     &-header {
 
         &-nav {
+            display: flex;
+            justify-content: space-between;
             padding: .4rem;
 
             .logo-container {
                 display: flex;
                 align-items: center;
-                width: 100%;
-
 
                 .logo {
                     width: 3rem;
@@ -116,6 +117,17 @@
                     color: #fff;
                 }
             }
+
+            &-title{
+                color: var(--title-color);
+            }
+
+            .theme-container {
+                i {
+                    color: var(--title-color);
+                    font-size: 2rem;
+                }
+            }
         }
 
         &-container {
@@ -128,18 +140,21 @@
                 padding: 1rem 0;
                 text-align: center;
 
+
                 strong {
                     color: #2363C2;
                 }
 
                 h1 {
                     font-size: 1.3rem;
+                    color: var(--title-color);
                     font-weight: 500;
                 }
 
                 h3 {
                     margin-top: .5rem;
                     opacity: .7;
+                    color: var(--title-color);
                     font-size: 1.1rem;
                     font-weight: 400;
                 }
@@ -177,5 +192,15 @@
         @include responsive-width();
         margin-top: 4rem;
 
+    }
+
+    &-modal {
+        display: none;
+        background-color: red;
+        position: fixed;
+        height: 100vh;
+        top: 0;
+        overflow: hidden;
+        width: 100%;
     }
 }
