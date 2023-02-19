@@ -190,7 +190,12 @@
 
     &-content {
         @include responsive-width();
-        margin-top: 4rem;
+        margin-top: 2rem;
+
+        h3{
+            margin-bottom: 20px;
+            color: var(--title-color);
+        }
 
     }
 

@@ -16,7 +16,7 @@ export class AppComponent {
   ]
 
   projects: Project[] = [
-    {title: 'Watcher: Habits and Tasks', description: 'An daily habit reminder to help you in day to day tasks', cards: [6,0,8], imgs: [ {imgURL: '../assets/watcher1.webp'},{imgURL: '../assets/watcher2.webp'}] , link:'', githubURL:'github' },
+    {title: 'Watcher: Habits and Tasks', description: `Watcher is my first app on Play Store. It's a a daily habit reminder to help you in day to day tasks. I challenge myself by using local database (SQLite)`, cards: [6,0,8], imgs: [ {imgURL: '../assets/watcher1.webp'},{imgURL: '../assets/watcher2.webp'}] , link:'https://play.google.com/store/apps/details?id=com.teixeiracompany.watcher&hl=pt_BR&gl=US', githubURL:'github' },
     {title: 'Ailos Challenge', description: 'An daily habit reminder to help you in day to day tasks', cards: [6,0,8,5], imgs: [ {imgURL: '../assets/watcher1.webp'},{imgURL: '../assets/watcher2.webp'}] , link:'', githubURL:'' }
   ]
 

@@ -1,10 +1,10 @@
 <div class="card-container">
     <div class="card-container-header">
-        <h1 class="title">{{project?.title}}</h1>
+        <p class="title">{{project?.title}}</p>
     </div>
 
     <div class="card-container-content">
-        <p class="description">{{project.description}}</p>
+        <p class="description">{{project.description | truncate: 100}}</p>
         <div class="card-container-content-wrapper">
             <div>
                 <img *ngFor="let i of project.imgs" class="card-container-content-wrapper-img" [src]="i.imgURL">

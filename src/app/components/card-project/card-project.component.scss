@@ -19,8 +19,11 @@
 
         .description{
             opacity: .6;
+            padding: 1rem 0;
+            // overflow: hidden;;
+            // max-lines: 2;
         }
-        
+
         &-wrapper {
             display: flex;
             justify-content: space-between;

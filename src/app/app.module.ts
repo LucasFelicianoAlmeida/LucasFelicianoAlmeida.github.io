@@ -18,6 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CardHomeComponent } from './components/card-home/card-home.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
+import { TruncatePipe } from './shared/pipes/truncate.pipe';
 
 
 export function playerFactory() {
@@ -49,7 +50,8 @@ const routes: Route[] =
     PillfilterComponent,
     SidenavComponent,
     CardHomeComponent,
-    CardProjectComponent
+    CardProjectComponent,
+    TruncatePipe
   ],
   imports: [
     BrowserModule,
