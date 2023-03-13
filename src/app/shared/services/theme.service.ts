@@ -7,7 +7,7 @@ export class ThemeService {
 
   constructor() { }
 
-  hasTheme() {
+  hasTheme(): boolean {
     return localStorage.getItem("theme") !== null
   }
   getTheme() {
@@ -16,16 +16,40 @@ export class ThemeService {
 
   toggleTheme() {
     const body = document.querySelector("html")
-    body?.classList.toggle("darkMode")
+
+
+
+    if (!this.hasTheme()) {
+      localStorage.setItem('theme', 'lightMode')
+    }
+
+    if (this.getTheme() === 'lightMode') {
+      body?.classList.add("darkMode")
+      localStorage.setItem('theme', 'darkMode');
+    }
+    else {
+      body?.classList.remove("darkMode")
+      localStorage.setItem('theme', 'lightMode');
+
+    }
   }
 
   get GetHtml() {
     return <HTMLHtmlElement>document.querySelector('html')
   }
-  InitMode() {
+
+
+  InitMode(): 'darkMode' | 'lightMode' {
     const theme = localStorage.getItem('theme')
     var html = this.GetHtml;
 
+    if (theme === 'darkMode') {
+      html.classList.add(`darkMode`)
+      return 'darkMode';
+    }
 
+    return 'lightMode';
   }
+
+
 }

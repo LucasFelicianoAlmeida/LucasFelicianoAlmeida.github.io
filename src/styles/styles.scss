@@ -34,7 +34,8 @@ body {
 }
 
 :root {
-    --primary-color: #fff;
+    --primary-color: #efefef;
+    --secondary-color: #fff;
     --title-color: #000;
     --secondary: #0189AB;
     --text: #3b3838;
@@ -44,9 +45,15 @@ body {
 
 
 .darkMode:root {
-    --primary-color: #2D2D2A;
+    --primary-color: #1e1e24;
+    --secondary-color: #2D2D2A;
     --title-color: #fff;
     --text: EFEFEF;
     --whiteA: #EFEFEF;
     --blakA: #000;
+}
+
+
+.visible{
+    visibility: visible!important;
 }

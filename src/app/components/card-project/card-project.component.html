@@ -6,7 +6,7 @@
     <div class="card-container-content">
         <p class="description">{{project.description | truncate: 100}}</p>
         <div class="card-container-content-wrapper">
-            <div>
+            <div class="card-container-content-wrapper-img">
                 <img *ngFor="let i of project.imgs" class="card-container-content-wrapper-img" [src]="i.imgURL">
             </div>
 
@@ -28,4 +28,6 @@
         </div>
         <div *ngIf="project.cards.length > 1"><i class="fa-solid fa-chevron-right"></i></div>
     </div>
+
+    <div class="highlight" [class]="project.type">{{project.type}}</div>
 </div>

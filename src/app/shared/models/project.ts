@@ -4,6 +4,7 @@ export interface Project{
     imgs: Img[] | undefined;
     link: string | undefined;
     githubURL: string | undefined;
+    type: 'web' | 'mobile' | 'desktop' | undefined
     cards: number[];
   }
   

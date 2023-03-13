@@ -19,6 +19,7 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { CardHomeComponent } from './components/card-home/card-home.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 
 
 export function playerFactory() {
@@ -57,6 +58,7 @@ const routes: Route[] =
     BrowserModule,
     FormsModule,
     FontAwesomeModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(routes),
     LottieModule.forRoot({ player: playerFactory, useWebWorker: true })
   ],

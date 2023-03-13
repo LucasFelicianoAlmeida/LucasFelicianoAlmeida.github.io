@@ -12,3 +12,9 @@
         max-width: 380px;
     }
 }
+
+@mixin subtitle{
+    font-weight: 500;
+    color: var(--title-color);
+    font-size: 1rem;
+}
