@@ -62,15 +62,16 @@
                 </div>
             </div>
         </div>
+        <!-- [attr.data-value]="'Meu nome é lucas'"  -->
         <div class="home-wrapper-header-container-title">
             <!-- <h1 *ngIf="developerMode">My Name is <strong>Lucas Teixeira</strong></h1> -->
-            <h1 [@hideAndShow]="stateName">{{returnText}}</h1>
-            <h3 [@hideAndShow]="stateName">Frontend | Mobile • Developer</h3>
+            <h1 data-text="" *ngIf="developerMode">My name is <strong>Lucas Teixeira</strong></h1>
+            <h3 >Frontend | Mobile • Developer</h3>
         </div>
 
     </div>
 
-    <div class="home-wrapper-content" *ngIf="developerMode">
+    <div class="home-wrapper-content" >
         <p class="subtitle">Projects</p>
         <ng-container *ngFor="let p of projects">
             <app-card-project [project]="p"></app-card-project>

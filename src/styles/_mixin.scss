@@ -13,8 +13,25 @@
     }
 }
 
-@mixin subtitle{
+@mixin subtitle {
     font-weight: 500;
     color: var(--title-color);
     font-size: 1rem;
 }
+
+// @mixin animation-mixin($name, $from, $to) {
+//     @keyframes #{$name} {
+//         0% {
+//             -webkit-transform: translateZ($from);
+//             transform: translateZ($from);
+//             opacity: 0;
+//         }
+
+//         100% {
+//             -webkit-transform: translateZ($to);
+//             transform: translateZ($to);
+//             opacity: 1;
+//         }
+//     }
+// }
+
