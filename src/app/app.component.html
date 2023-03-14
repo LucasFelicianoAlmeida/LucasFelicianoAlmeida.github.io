@@ -47,11 +47,12 @@
                 <button class="logo">LT</button>
             </div>
             <div class="home-wrapper-header-nav-title">
-                <h3>{{developerMode ? 'Developer mode🔥' : 'Chill mode💆🏽‍♂️'}}</h3>
+                <h3>{{developerMode ? 'Developer mode🔥' : 'Personal mode💆🏽‍♂️'}}</h3>
             </div>
             <div class="theme-container">
                 <i *ngIf="!developerMode" (click)="toggle()" class="fa-solid fa-toggle-off"></i>
-                <i *ngIf="developerMode" (click)="toggle()"  class="fa-solid fa-toggle-on"></i>
+                <i *ngIf="developerMode" (click)="toggle()" class="fa-solid fa-toggle-on"></i>
+                <img src="../assets/dev-mode.png" *ngIf="!developerMode" />
             </div>
         </div>
         <div class="home-wrapper-header-container">
@@ -65,13 +66,16 @@
         <!-- [attr.data-value]="'Meu nome é lucas'"  -->
         <div class="home-wrapper-header-container-title">
             <!-- <h1 *ngIf="developerMode">My Name is <strong>Lucas Teixeira</strong></h1> -->
-            <h1 data-text="" *ngIf="developerMode">My name is <strong>Lucas Teixeira</strong></h1>
-            <h3 >Frontend | Mobile • Developer</h3>
+            <ng-container *ngIf="developerMode">
+                <h1 data-text="" >My name is <strong>Lucas Teixeira</strong></h1>
+                <h3>Frontend | Mobile • Developer</h3>
+            </ng-container>
+
         </div>
 
     </div>
 
-    <div class="home-wrapper-content" >
+    <div class="home-wrapper-content" *ngIf="developerMode">
         <p class="subtitle">Projects</p>
         <ng-container *ngFor="let p of projects">
             <app-card-project [project]="p"></app-card-project>

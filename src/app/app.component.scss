@@ -126,9 +126,26 @@
             }
 
             .theme-container {
+                position: relative;
                 i {
                     color: var(--title-color);
                     font-size: 2rem;
+                }
+
+                .dev-mode-pointer{
+                    background-image: url('../assets/instagramicon.png');
+                    width: 350px;
+
+                    height: 3rem;
+                    position: absolute;
+                }
+
+                img{
+                    position: absolute;
+                    left: -200%;
+                    top: 100%;
+                    z-index: 2;
+                    height: 2.5rem;
                 }
             }
         }

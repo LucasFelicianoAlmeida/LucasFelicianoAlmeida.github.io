@@ -36,14 +36,14 @@ export class AppComponent {
     { title: 'Ailos Challenge', description: 'That was a company challenge I used to improve my skills in responsive layout, mocking and testing.', cards: [2, 5], imgs: [{ imgURL: 'https://i.imgur.com/LsTSQRM.png' }, { imgURL: 'https://i.imgur.com/2aLAEjw.png' }], link: undefined, githubURL: 'https://github.com/lucass-teixeira/Ailos-Challenge', type: 'web' }
   ]
 
-  developerMode: boolean = false;
+  developerMode: boolean = true;
 
   constructor(public themeService: ThemeService) {
     const theme = this.themeService.InitMode();
 
     console.log(theme);
-    if (theme === 'darkMode')
-      this.developerMode = true;
+    if (theme === 'lightMode')
+      this.developerMode = false;
   }
 
 
