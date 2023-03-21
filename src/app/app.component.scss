@@ -99,6 +99,11 @@
             padding: .4rem;
             background-color: var(--secondary-color);
             @include box-shadow();
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 3;
 
             .logo-container {
                 display: flex;
@@ -126,13 +131,17 @@
             }
 
             .theme-container {
+                display: flex;
+                justify-content: space-between;
                 position: relative;
+                width: 100px;
+
                 i {
                     color: var(--title-color);
-                    font-size: 2rem;
+                    font-size: 1.8rem;
                 }
 
-                .dev-mode-pointer{
+                .dev-mode-pointer {
                     background-image: url('../assets/instagramicon.png');
                     width: 350px;
 
@@ -140,12 +149,13 @@
                     position: absolute;
                 }
 
-                img{
+                img {
                     position: absolute;
-                    left: -200%;
+                    left: 0;
                     top: 100%;
                     z-index: 2;
                     height: 2.5rem;
+
                 }
             }
         }
@@ -183,10 +193,6 @@
                 }
             }
 
-            &-title::after{
-                content: attr(data-value);
-
-            }
 
             .main-img-container {
                 position: relative;
@@ -222,12 +228,6 @@
         @include responsive-width();
         margin-top: 2rem;
 
-
-        .subtitle {
-            margin-bottom: 20px;
-            @include subtitle();
-        }
-
     }
 
     &-modal {
@@ -239,8 +239,120 @@
         overflow: hidden;
         width: 100%;
     }
+
+    &-personal-content {
+        @include responsive-width();
+
+        .hobby-container {
+            // display: flex;
+            // justify-content: center;
+
+
+
+            &-item {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                height: 200px;
+                margin: 30px;
+
+
+                &-vid {
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background: url(../assets/basket.gif) no-repeat;
+                    background-size: cover;
+                    border-radius: 4px;
+                    transform: rotate(-10deg);
+                    transition: all .3s linear;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                }
+
+                .nature-img {
+                    background: url(../assets/nature.JPG) no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+
+                &:hover .hobby-container-item-vid {
+                    transform: rotate(0);
+                }
+            }
+
+            .transform-left {
+                transform: rotate(10deg);
+            }
+
+            .align-left {
+                transform: translate(-50%)
+            }
+
+            &:hover &-vid {
+                animation: hover-opacity-show 2s linear infinite;
+            }
+
+
+            &-title {
+                color: white;
+                font-weight: 500;
+                font-size: 2.5rem;
+                background: url('../assets/basket.gif') no-repeat;
+                background-position: center;
+                -webkit-background-clip: text;
+                position: absolute;
+                top: 50%;
+                transform: translate(50%, -50%);
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                strong {
+                    color: black;
+                }
+
+                // &:hover {
+                //     animation: hover-opacity-show .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                // }
+
+            }
+        }
+
+
+        // .estilizado:hover {
+
+
+        .estilizado:hover .estilizado-text {
+            animation: hover-opacity-hide 1s linear both;
+        }
+
+    }
 }
 
+@keyframes hover-opacity-hide {
+
+    0% {
+        opacity: 1;
+
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hover-opacity-show {
+
+    0% {
+        // opacity: 0;
+        background-position: 20% 75%;
+
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}
 
 @-webkit-keyframes slide-top {
     0% {
@@ -292,4 +404,65 @@
         transform: translateZ(0);
         opacity: 1;
     }
+}
+
+.text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    content: 'Lucas Teixeira Portfolio';
+    font-weight: 300;
+    top: 50%;
+    /* position the top  edge of the element at the middle of the parent */
+    left: 50%;
+    /* position the left edge of the element at the middle of the parent */
+    transform: translate(-50%, -50%);
+    // color: transparent;
+    // background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://i.imgur.com/suGIqE5.jpg') no-repeat;
+    // -webkit-background-clip: text;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.text:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 120%;
+    background: linear-gradient(90deg, transparent 0%, #fff 30%, #fff 100%);
+    animation: animate 3s linear forwards;
+    background-blend-mode: lighten;
+}
+
+
+@media (max-device-width: 768px) {
+    .text {
+        font-size: 100%;
+    }
+}
+
+
+@keyframes animate {
+    0% {
+        left: -20%;
+    }
+
+    50% {
+        left: 120%;
+    }
+
+    100% {
+        left: -20%;
+    }
+}
+
+.image-container {
+    position: relative;
+    height: 100vh;
+    background-color: #fff;
 }

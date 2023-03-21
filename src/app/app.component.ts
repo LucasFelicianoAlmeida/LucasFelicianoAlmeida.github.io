@@ -1,5 +1,6 @@
 import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, ViewEncapsulation } from '@angular/core';
+import { delay, interval, Observable, of, tap, timeInterval } from 'rxjs';
 import { Project } from './shared/models/project';
 import { ThemeService } from './shared/services/theme.service';
 
@@ -37,8 +38,18 @@ export class AppComponent {
   ]
 
   developerMode: boolean = true;
+  canShow: boolean = false;
 
+  el1 = '../assets/basket.gif';
+  el2 = 'http://24.media.tumblr.com/0a875bd986a521c3ed0c9716ddcc2da3/tumblr_n1oexzlyuZ1qef46ho1_500.gif';
+
+  $initialInterval: Observable<any>; 
   constructor(public themeService: ThemeService) {
+
+    this.$initialInterval = interval(2500).pipe(tap(value => this.canShow = true),timeInterval());
+    // setInterval(() => {
+    //   this.canShow = true;
+    // }, 3000)
     const theme = this.themeService.InitMode();
 
     console.log(theme);

@@ -1,6 +1,6 @@
 @import './mixin';
 @import './colors';
-@import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
+// @import '~@fortawesome/fontawesome-free/scss/fontawesome.scss';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 
@@ -10,6 +10,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+// @media (max-device-width: 768px) {
+//     html{
+//         font-size: 50%;
+//     } 
+// }
 
 
 body {
@@ -56,4 +62,16 @@ body {
 
 .visible{
     visibility: visible!important;
+}
+
+.description{
+    @include subtitle();
+    font-weight: 400;
+    margin-bottom: 25px;
+    opacity: .8;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    @include subtitle();
 }
