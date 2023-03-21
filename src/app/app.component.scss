@@ -1,93 +1,5 @@
 @import '../styles/mixin';
 
-// .home-wrapper {
-//     .home-header-container {
-//         display: flex;
-//         justify-content: space-evenly;
-//         width: 100%;
-//         height: 100vh;
-
-//         .title-container {
-//             margin-top: 35vh;
-
-//             strong {
-//                 color: #2363C2;
-//             }
-
-//             h1 {
-//                 font-size: 2rem;
-//                 font-weight: 500;
-//                 letter-spacing: .22rem;
-//             }
-
-
-
-//             h3 {
-//                 margin-top: .7rem;
-//                 opacity: .7;
-//                 font-size: 1.5rem;
-//                 font-weight: 400;
-//                 letter-spacing: .4rem;
-//             }
-//         }
-
-//         .header-detail-container {
-//             position: relative;
-//             align-self: center;
-//             height: fit-content;
-//             width: fit-content;
-
-
-
-
-//             .my-image {
-//                 position: absolute;
-//                 top: 0;
-//                 z-index: 0;
-//                 left: 0;
-//                 width: 430px;
-//                 height: 488px;
-//                 background: url('../assets/me-nobackground.png');
-//                 background-size: cover;
-//                 background-repeat: no-repeat;
-//                 background-position: center;
-//             }
-//         }
-
-//     }
-// }
-
-// .technologies-container {
-//     display: none;
-// }
-
-// @media (min-width: 768px) {
-
-//     .technologies-container {
-//         display: flex;
-//         flex-direction: column;
-//         position: absolute;
-//         right: 80%;
-//         bottom: 10%;
-
-//         app-card-home {
-//             margin-top: 2.5rem;
-//             z-index: 1;
-//             transition: all .3 cubic-bezier();
-
-//         }
-
-//         ::ng-deep {
-//             app-card-home:hover {
-//                 .card-container {
-//                     background-color: #38393D;
-//                     color: #fff;
-//                 }
-//             }
-//         }
-//     }
-// }
-
 .home-wrapper {
     background-color: var(--primary-color);
 
@@ -142,7 +54,7 @@
                 }
 
                 .dev-mode-pointer {
-                    background-image: url('../assets/instagramicon.png');
+                    // background-image: url('../assets/instagramicon.png');
                     width: 350px;
 
                     height: 3rem;
@@ -244,11 +156,6 @@
         @include responsive-width();
 
         .hobby-container {
-            // display: flex;
-            // justify-content: center;
-
-
-
             &-item {
                 position: relative;
                 display: flex;
@@ -263,7 +170,7 @@
                     display: flex;
                     justify-content: center;
                     align-items: center;
-                    background: url(../assets/basket.gif) no-repeat;
+                    background: url(https://i.imgur.com/om6bQzI.mp4) no-repeat;
                     background-size: cover;
                     border-radius: 4px;
                     transform: rotate(-10deg);
@@ -311,16 +218,8 @@
                     color: black;
                 }
 
-                // &:hover {
-                //     animation: hover-opacity-show .4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-                // }
-
             }
         }
-
-
-        // .estilizado:hover {
-
 
         .estilizado:hover .estilizado-text {
             animation: hover-opacity-hide 1s linear both;
@@ -354,57 +253,7 @@
     }
 }
 
-@-webkit-keyframes slide-top {
-    0% {
-        -webkit-transform: translateY(100px);
-        transform: translateY(100px);
-    }
 
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
-
-@keyframes slide-top {
-    0% {
-        -webkit-transform: translateY(100px);
-        transform: translateY(100px);
-    }
-
-    100% {
-        -webkit-transform: translateY(0px);
-        transform: translateY(0px);
-    }
-}
-
-@-webkit-keyframes slide-in-bck-center {
-    0% {
-        -webkit-transform: translateZ(600px);
-        transform: translateZ(600px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-bck-center {
-    0% {
-        -webkit-transform: translateZ(600px);
-        transform: translateZ(600px);
-        opacity: 0;
-    }
-
-    100% {
-        -webkit-transform: translateZ(0);
-        transform: translateZ(0);
-        opacity: 1;
-    }
-}
 
 .text {
     font-family: 'Roboto', sans-serif;
