@@ -33,7 +33,7 @@ export class AppComponent {
   ]
 
   projects: Project[] = [
-    { title: 'Watcher: Habits and Tasks', description: `Watcher is my first app on Play Store. It's a a daily habit reminder to help you in day to day tasks. I challenge myself by using local database (SQLite)`, cards: [6, 0, 8], imgs: [{ imgURL: 'https://play-lh.googleusercontent.com/N4WkjLk1AO59lBjT-q65-_Y6a_KIGdtodRAiI40gFCryibAm_N_TAykgEhrkyEOv5XBs=w2560-h1440-rw' }, { imgURL: 'https://play-lh.googleusercontent.com/3Bwevc0heC6eFd2s8e6I6QnA9O3VbxDMcHJNjMsbJKwor0oDD-suY57I1iK4NbW8gw=w2560-h1440-rw' }], link: 'https://play.google.com/store/apps/details?id=com.teixeiracompany.watcher&hl=pt_BR&gl=US', githubURL: 'github', type: 'mobile' },
+    { title: 'Watcher: Habits and Tasks', description: `Watcher is my first app on Play Store. It's a a daily habit reminder to help you in day to day tasks. I challenge myself by using local database (SQLite)`, cards: [6, 0, 8], imgs: [{ imgURL: 'https://play-lh.googleusercontent.com/N4WkjLk1AO59lBjT-q65-_Y6a_KIGdtodRAiI40gFCryibAm_N_TAykgEhrkyEOv5XBs=w2560-h1440-rw' }, { imgURL: 'https://play-lh.googleusercontent.com/3Bwevc0heC6eFd2s8e6I6QnA9O3VbxDMcHJNjMsbJKwor0oDD-suY57I1iK4NbW8gw=w2560-h1440-rw' }], link: 'https://play.google.com/store/apps/details?id=com.teixeiracompany.watcher&hl=pt_BR&gl=US', githubURL: '', type: 'mobile' },
     { title: 'Ailos Challenge', description: 'That was a company challenge I used to improve my skills in responsive layout, mocking and testing.', cards: [2, 5], imgs: [{ imgURL: 'https://i.imgur.com/LsTSQRM.png' }, { imgURL: 'https://i.imgur.com/2aLAEjw.png' }], link: undefined, githubURL: 'https://github.com/lucass-teixeira/Ailos-Challenge', type: 'web' }
   ]
 

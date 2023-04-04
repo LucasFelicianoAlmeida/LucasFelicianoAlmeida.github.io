@@ -11,8 +11,12 @@
             </div>
 
             <div class="card-container-content-wrapper-actions">
-                <a [href]="project.link">link</a>
-                <i *ngIf="project.githubURL" class="fab fa-github"></i>
+                <div *ngIf="project.link" class="link-container">
+                    <a [href]="project.link">website</a>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </div>
+
+                <a [href]="project.githubURL" *ngIf="project.githubURL"><i  class="fab fa-github"></i></a>
             </div>
 
         </div>
