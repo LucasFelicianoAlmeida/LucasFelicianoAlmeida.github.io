@@ -19,7 +19,8 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { CardHomeComponent } from './components/card-home/card-home.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { BtnFilterSelectComponent } from './components/btn-filter-select/btn-filter-select.component'
 
 
 export function playerFactory() {
@@ -52,7 +53,8 @@ const routes: Route[] =
     SidenavComponent,
     CardHomeComponent,
     CardProjectComponent,
-    TruncatePipe
+    TruncatePipe,
+    BtnFilterSelectComponent
   ],
   imports: [
     BrowserModule,

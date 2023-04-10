@@ -91,12 +91,14 @@
         <p class="description">I am a passionate frontend developer programing since 2019. I love beautiful interfaces
             and bringing <strong>UI</strong> and <strong>UX</strong> to life. </p>
         <p class="subtitle">Projects</p>
+        <!-- <app-btn-filter-select></app-btn-filter-select> -->
+
         <ng-container *ngFor="let p of projects">
             <app-card-project [project]="p"></app-card-project>
         </ng-container>
     </div>
 
-    <div class="home-wrapper-personal-content" *ngIf="!developerMode">
+    <div class="home-wrapper-personal-content" *ngIf="!developerMode" style="display: none">
         <p class="subtitle">if(lucas.hasFreeTime)</p>
 
         <div class="hobby-container">
@@ -109,14 +111,9 @@
             <div class="hobby-container-item">
                 <div class="hobby-container-item-vid">
                 </div>
-                <!-- <video autoplay loop class="hobby-container-item-vid">
-                    <source src="https://i.imgur.com/om6bQzI.mp4" />
-                </video> -->
+
                 <div class="hobby-container-title">Bas<strong>ket</strong></div>
             </div>
-            <!-- <div class="hobby-container-title"  style="color: black">ket</div> -->
-
-
         </div>
 
 

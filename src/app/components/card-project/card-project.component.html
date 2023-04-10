@@ -4,33 +4,36 @@
     </div>
 
     <div class="card-container-content">
-        <p class="description">{{project.description | truncate: 100}}</p>
+        <div style="display: flex;">
+            <p class="description">{{project.description | truncate: 100}}</p>
+            <div>
+                <div *ngFor="let card of project.cards; index as i" style="margin-top: 5px">
+                    <ng-container *ngIf="i <= 1">
+                        <app-pill [Topic]="card"></app-pill>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
         <div class="card-container-content-wrapper">
-            <div class="card-container-content-wrapper-img">
+            <div class="card-container-content-wrapper-img" style="display: none">
                 <img *ngFor="let i of project.imgs" class="card-container-content-wrapper-img" [src]="i.imgURL">
             </div>
 
             <div class="card-container-content-wrapper-actions">
-                <div *ngIf="project.link" class="link-container">
-                    <a [href]="project.link">website</a>
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                </div>
-
-                <a [href]="project.githubURL" *ngIf="project.githubURL"><i  class="fab fa-github"></i></a>
+                    <div *ngIf="project.link" class="link-container">
+                        <a [href]="project.link">website</a>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                    <a [href]="project.githubURL" *ngIf="project.githubURL"><i class="fab fa-github"></i></a>
+                    <i class="fa-solid fa-chevron-right"></i>
             </div>
 
         </div>
     </div>
 
     <div class="card-container-footer">
-        <div style="display: flex">
-            <div *ngFor="let card of project.cards; index as i">
-                <ng-container *ngIf="i <= 1">
-                    <app-pill [Topic]="card"></app-pill>
-                </ng-container>
-            </div>
-        </div>
-        <div *ngIf="project.cards.length > 1"><i class="fa-solid fa-chevron-right"></i></div>
+
     </div>
 
     <div class="highlight" [class]="project.type">{{project.type}}</div>
