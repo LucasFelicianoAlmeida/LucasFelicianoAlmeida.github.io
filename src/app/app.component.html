@@ -1,127 +1,92 @@
-<!-- <app-nav-menu></app-nav-menu>
 <router-outlet></router-outlet>
-<app-footer></app-footer>
-<app-top-of-page></app-top-of-page> -->
 
+<div style="display: none">
+    <ng-container *ngIf="($initialInterval | async); else loadingPage">
+    </ng-container>
 
-<!-- <div class="home-wrapper">
-    <app-sidenav></app-sidenav>
-    <div class="home-header-container">
-        <div class="title-container">
-            <h1>My Name is <strong>Lucas Teixeira</strong></h1>
-            <h3>Frontend | Mobile • Developer</h3>
+    <ng-template #loadingPage>
+        <div class="image-container" *ngIf="!canShow">
+            <div class="text">Lucas Teixeira Portfolio</div>
         </div>
+    </ng-template>
 
-        <div class="header-detail-container">
-            <div  class="technologies-container">
-                <app-card-home *ngFor="let l of learnings" [title]="l.title" [subTitle]="l.subtitle" [src]="l.img" [transform]="l.style"></app-card-home>
-            </div>
-            <img href="../assets/rectangle.svg"/>
-            <svg xmlns="http://www.w3.org/2000/svg" width="430" height="488" viewBox="0 0 430 488" fill="none">
-                <path d="M0 110C0 49.2487 49.2487 0 110 0H430V488H0V110Z" fill="url(#paint0_linear_14_20)" />
-                <defs>
-                    <linearGradient id="paint0_linear_14_20" x1="215" y1="0" x2="215" y2="488"
-                        gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#020024" />
-                        <stop offset="0.552083" stop-color="#090979" stop-opacity="0.5" />
-                        <stop offset="1" stop-color="#00CBF6" stop-opacity="0.5" />
-                    </linearGradient>
-                </defs>
-            </svg>
-
-
-            <div class="my-image">
-            </div>
-        </div>
-    </div>
-
-    <div class="projects-container">
-
-    </div>
-</div> -->
-<ng-container *ngIf="($initialInterval | async); else loadingPage">
-</ng-container>
-
-<ng-template #loadingPage>
-    <div class="image-container" *ngIf="!canShow">
-        <div class="text">Lucas Teixeira Portfolio</div>
-    </div>
-</ng-template>
-
-<div class="home-wrapper" *ngIf="canShow">
-    <div class="home-wrapper-header">
-        <div class="home-wrapper-header-nav">
-            <div class="logo-container">
-                <button class="logo">LT</button>
-            </div>
-            <div class="home-wrapper-header-nav-title">
-                <h3>{{developerMode ? 'Developer Life 👨‍💻' : 'Personal Life💆🏽‍♂️'}}</h3>
-            </div>
-            <div class="theme-container">
-                <a href="https://github.com/lucass-teixeira"><i class="fab fa-github ng-star-inserted"></i></a> 
-                <a href="https://www.linkedin.com/in/lucasteixeira20/"><i class="fab fa-linkedin ng-star-inserted"></i></a>
-                <i *ngIf="!developerMode" (click)="toggle()" class="fa-solid fa-toggle-off"></i>
-                <i *ngIf="developerMode" (click)="toggle()" class="fa-solid fa-toggle-on"></i>
-                <img src="../assets/dev-mode.png" *ngIf="!developerMode" />
-            </div>
-        </div>
-        <div class="home-wrapper-header-container">
-            <div class="main-img-container">
-                <img src="../assets/rectangle.svg" class="img-rectangle" />
-                <!-- <img src="../assets/me-nobackground.png" class="img-me-header" /> -->
-                <div class="img-me-header">
+    <div class="home-wrapper" *ngIf="canShow">
+        <div class="home-wrapper-header">
+            <div class="home-wrapper-header-nav">
+                <div class="logo-container">
+                    <button class="logo">LT</button>
+                </div>
+                <div class="home-wrapper-header-nav-title">
+                    <h3>{{developerMode ? 'Developer Life 👨‍💻' : 'Personal Life💆🏽‍♂️'}}</h3>
+                </div>
+                <div class="theme-container">
+                    <a href="https://github.com/lucass-teixeira"><i class="fab fa-github ng-star-inserted"></i></a>
+                    <a href="https://www.linkedin.com/in/lucasteixeira20/"><i
+                            class="fab fa-linkedin ng-star-inserted"></i></a>
+                    <i *ngIf="!developerMode" (click)="toggle()" class="fa-solid fa-toggle-off"></i>
+                    <i *ngIf="developerMode" (click)="toggle()" class="fa-solid fa-toggle-on"></i>
+                    <img src="../assets/dev-mode.png" *ngIf="!developerMode" />
                 </div>
             </div>
+            <div class="home-wrapper-header-container">
+                <div class="main-img-container">
+                    <img src="../assets/rectangle.svg" class="img-rectangle" />
+                    <!-- <img src="../assets/me-nobackground.png" class="img-me-header" /> -->
+                    <div class="img-me-header">
+                    </div>
+                </div>
+            </div>
+            <!-- [attr.data-value]="'Meu nome é lucas'"  -->
+            <div class="home-wrapper-header-container-title">
+                <!-- <h1 *ngIf="developerMode">My Name is <strong>Lucas Teixeira</strong></h1> -->
+                <ng-container *ngIf="developerMode">
+                    <h1 data-text="">My name is <strong>Lucas Teixeira</strong></h1>
+                    <h3>Frontend | Mobile • Developer</h3>
+                </ng-container>
+
+            </div>
+
         </div>
-        <!-- [attr.data-value]="'Meu nome é lucas'"  -->
-        <div class="home-wrapper-header-container-title">
-            <!-- <h1 *ngIf="developerMode">My Name is <strong>Lucas Teixeira</strong></h1> -->
-            <ng-container *ngIf="developerMode">
-                <h1 data-text="">My name is <strong>Lucas Teixeira</strong></h1>
-                <h3>Frontend | Mobile • Developer</h3>
+
+        <div class="home-wrapper-content" *ngIf="developerMode">
+            <p class="subtitle">About Me</p>
+
+            <p class="description">I am a passionate frontend developer programing since 2019. I love beautiful
+                interfaces
+                and bringing <strong>UI</strong> and <strong>UX</strong> to life. </p>
+            <p class="subtitle">Projects</p>
+            <!-- <app-btn-filter-select></app-btn-filter-select> -->
+
+            <ng-container *ngFor="let p of projects">
+                <app-card-project [project]="p"></app-card-project>
             </ng-container>
-
         </div>
 
-    </div>
+        <div class="home-wrapper-personal-content" *ngIf="!developerMode" style="display: none">
+            <p class="subtitle">if(lucas.hasFreeTime)</p>
 
-    <div class="home-wrapper-content" *ngIf="developerMode">
-        <p class="subtitle">About Me</p>
+            <div class="hobby-container">
 
-        <p class="description">I am a passionate frontend developer programing since 2019. I love beautiful interfaces
-            and bringing <strong>UI</strong> and <strong>UX</strong> to life. </p>
-        <p class="subtitle">Projects</p>
-        <!-- <app-btn-filter-select></app-btn-filter-select> -->
-
-        <ng-container *ngFor="let p of projects">
-            <app-card-project [project]="p"></app-card-project>
-        </ng-container>
-    </div>
-
-    <div class="home-wrapper-personal-content" *ngIf="!developerMode" style="display: none">
-        <p class="subtitle">if(lucas.hasFreeTime)</p>
-
-        <div class="hobby-container">
-
-            <div class="hobby-container-item">
-                <div class="hobby-container-item-vid nature-img" [class.transform-left]="true">
+                <div class="hobby-container-item">
+                    <div class="hobby-container-item-vid nature-img" [class.transform-left]="true">
+                    </div>
+                    <div class="hobby-container-title" [class.align-left]="true"><strong>Nat</strong>ure</div>
                 </div>
-                <div class="hobby-container-title" [class.align-left]="true"><strong>Nat</strong>ure</div>
-            </div>
-            <div class="hobby-container-item">
-                <div class="hobby-container-item-vid">
-                </div>
+                <div class="hobby-container-item">
+                    <div class="hobby-container-item-vid">
+                    </div>
 
-                <div class="hobby-container-title">Bas<strong>ket</strong></div>
+                    <div class="hobby-container-title">Bas<strong>ket</strong></div>
+                </div>
             </div>
+
+
+
+        </div>
+        <div class="home-wrapper-footer">
         </div>
 
-
-
-    </div>
-    <div class="home-wrapper-footer">
-    </div>
-
-    <div class="home-wrapper-modal">
+        <div class="home-wrapper-modal">
+        </div>
     </div>
 </div>

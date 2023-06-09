@@ -20,7 +20,8 @@ import { CardHomeComponent } from './components/card-home/card-home.component';
 import { CardProjectComponent } from './components/card-project/card-project.component';
 import { TruncatePipe } from './shared/pipes/truncate.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { BtnFilterSelectComponent } from './components/btn-filter-select/btn-filter-select.component'
+import { BtnFilterSelectComponent } from './components/btn-filter-select/btn-filter-select.component';
+import { ScreenShareComponent } from './screen-share/screen-share.component'
 
 
 export function playerFactory() {
@@ -29,10 +30,12 @@ export function playerFactory() {
 
 const routes: Route[] = 
 [
-  {path: 'home', component: HomeComponent },
-  {path: '', component: HomeComponent},
-  {path: 'projects', component: ProjectsComponent},
-  {path:'**',redirectTo:'home'},
+  // {path: 'home', component: ScreenShareComponent },
+  // {path: '', component: HomeComponent},
+  // {path: 'projects', component: ProjectsComponent},
+  // {path:'**',redirectTo:'home'},
+  {path: '', component: ScreenShareComponent },
+  {path:'**',redirectTo:''},
 ]
 
 
@@ -54,7 +57,8 @@ const routes: Route[] =
     CardHomeComponent,
     CardProjectComponent,
     TruncatePipe,
-    BtnFilterSelectComponent
+    BtnFilterSelectComponent,
+    ScreenShareComponent
   ],
   imports: [
     BrowserModule,
