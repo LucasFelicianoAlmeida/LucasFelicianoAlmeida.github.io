@@ -1,6 +1,0 @@
-<div class="container">
-    <app-search-bar (searchEvent)="search($event)"></app-search-bar>
-    <app-pillfilter  [pills]="[1,2,3,4,5,6]" (filterSelected)="filter($event)"></app-pillfilter>
-    <app-card *ngFor="let element of Elements" [CardData]="element"></app-card>
-    
-</div>
