@@ -1,0 +1,7 @@
+.screen-share-container{
+    background-color: #51139c;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
