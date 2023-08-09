@@ -1,0 +1,13 @@
+<div class="filter">
+    <div class="pills-container">
+        <app-pill *ngFor="let pill of selectedPills" [Topic]="pill" [isActive]="true" [canBeSelected]="true" (selected)="removeFilter($event)"></app-pill>
+    </div>
+    <div class="filter-nofilter" *ngIf="selectedPills.length == 0">
+        <h3>no filter</h3>
+    </div>
+    <hr />
+    <div class="pills-container">
+        <app-pill *ngFor="let pill of unselectedPills" [Topic]="pill" [canBeSelected]="true" (selected)="addFilter($event)"></app-pill>
+    </div>
+
+</div>

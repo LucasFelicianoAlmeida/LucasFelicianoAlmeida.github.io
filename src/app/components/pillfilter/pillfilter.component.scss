@@ -1,0 +1,15 @@
+
+.filter{
+
+    transition: all 1s;
+    &-nofilter{
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        opacity: .8;
+        justify-content: center;
+    }
+    .pills-container{
+        display: flex;
+        padding: 1rem;
+    }
+}

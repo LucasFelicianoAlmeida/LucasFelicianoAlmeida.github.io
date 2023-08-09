@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucas Teixeira</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<body>
+    <div class="header-section position-relative d-flex">
+        <div class=" navbar navbar-expand fixed-top navbar-dark"   style=" background-color: black;">
+            <div class="container" style="display: grid;align-items: center; justify-items: center; width: fit-content; margin: 0 auto; justify-content: space-between;">
+
+                <a href="index.html" class="navbar-brand">LT</a>
+                <div class="collapse navbar-collapse"  id="navbarNavDropdown">
+                    <ul class="navbar-nav  ">
+                        <li class="nav-item">
+                            <a href="#about" class="nav-link fw-semibold">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link fw-semibold">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#contact" class="nav-link fw-semibold">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>    
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropDown">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+           
+        </div>
+    <div class="wave-container position-absolute w-100" >
+        <div class="img-wave"></div>
+    </div>
+
+    <div class="container align-self-center">
+        
+        <div class="shadow-lg card border-0  my-1 p-2" style="padding-top: 5rem!important;">
+            <div class="card-body row">
+                <div class="col-12 d-grid align-items-center justify-content-center" >
+                    <img  src="https://user-images.githubusercontent.com/54940494/257253464-83511fe0-7ee8-4293-8619-44f4836d97d9.jpg" 
+                    class="header-img rounded-circle img-thumbnail img-responsive shadow-4 border-5 border-black" style="height: 300px" />
+                    <div class="px-md-1 " style="text-align: center;">
+                        <h2 class="fw-4">Lucas Teixeira</h2>
+                        <h6 class="opacity-75">Frontend Developer</h6>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        <!-- <img style="height: 300px" style="right: 100%; position: absolute"  src="https://user-images.githubusercontent.com/54940494/257265660-eb27b30c-264b-4b68-9ece-65439f982988.svg"/> -->
+
+    </div>
+    <div class="position-absolute justify-content-center mouse-container" style="bottom: 0; height: 90px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-mouse" viewBox="0 0 16 16">
+            <path d="M8 3a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 3zm4 8a4 4 0 0 1-8 0V5a4 4 0 1 1 8 0v6zM8 0a5 5 0 0 0-5 5v6a5 5 0 0 0 10 0V5a5 5 0 0 0-5-5z"/>
+          </svg>
+    </div>
+       
+    </div>
+
+    <section id="about" class="about-section py-5 container">
+        <h6 class="display-5">About</h6>
+        <div class="row py-5">
+            <div class="col-md-6 ">
+                <img class="img-thumbnail" src="https://user-images.githubusercontent.com/54940494/257807623-c07c5dd7-2f63-49ca-9dfe-ac455d7b243a.jpg" style="width:100%"/>
+            </div>
+            <div class="col-md-6 px-5">
+                <p class="lead" class="align-items-center " style="vertical-align: middle;">Hello there! I'm Lucas Teixeira, over the years, I have cultivated a deep interest in software engineering, and I am constantly seeking ways to expand my knowledge and stay up-to-date with the latest advancements in the industry. My insatiable curiosity drives me to explore new technologies and find innovative solutions to complex challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-section py-5 container">
+        <h6 class="display-5">Projects</h6>
+
+    </div>
+
+    <section id="contact" class="contact-section py-5 container">
+        <h6 class="display-5">Contact</h6>
+        <div class="shadow-lg col-10 offset-1">
+
+            <div class="row pt-3 px-3">
+                <p class="lead opacity-75">Feel free to send me an email</p>
+            </div>
+            <div class="row p-3">
+                <div class="col-12 ">
+                    <form action="https://formspree.io/f/xpzgpqgq" method="POST">
+                        <div class="mb-3">
+                            <input type="text" 
+                                   class="form-control form-control-lg"
+                                   name="name" placeholder="Name"/>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" 
+                                   class="form-control form-control-lg"
+                                   name="email" placeholder="Email"/>
+                        </div>
+                        <div class="mb-3">
+                            <textarea  
+                                   class="form-control form-control-lg"
+                                   name="message" 
+                                   rows="6"
+                                    placeholder="Message">
+                            </textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary text-white mt-3">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+</body>
+<script>
+    document.addEventListener("scroll", (event) => {
+        let scrollPos = window.scrollY;
+        const navBrand = document.getElementsByClassName('navbar-brand')[0]
+
+        if(scrollPos > 350) {
+            navBrand.classList.add('d-none')
+        }
+        else{
+            navBrand.classList.remove('d-none')
+
+        }
+        console.log(event)
+    });
+
+// onscroll = (event) => {};
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</html>

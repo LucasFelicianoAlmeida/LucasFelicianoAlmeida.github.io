@@ -1,0 +1,40 @@
+<div class="card-container">
+    <div class="card-container-header">
+        <p class="title">{{project?.title}}</p>
+    </div>
+
+    <div class="card-container-content">
+        <div style="display: flex;">
+            <p class="description">{{project.description | truncate: 100}}</p>
+            <div>
+                <div *ngFor="let card of project.cards; index as i" style="margin-top: 5px">
+                    <ng-container *ngIf="i <= 1">
+                        <app-pill [Topic]="card"></app-pill>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container-content-wrapper">
+            <div class="card-container-content-wrapper-img" style="display: none">
+                <img *ngFor="let i of project.imgs" class="card-container-content-wrapper-img" [src]="i.imgURL">
+            </div>
+
+            <div class="card-container-content-wrapper-actions">
+                    <div *ngIf="project.link" class="link-container">
+                        <a [href]="project.link">website</a>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                    <a [href]="project.githubURL" *ngIf="project.githubURL"><i class="fab fa-github"></i></a>
+                    <i class="fa-solid fa-chevron-right"></i>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="card-container-footer">
+
+    </div>
+
+    <div class="highlight" [class]="project.type">{{project.type}}</div>
+</div>

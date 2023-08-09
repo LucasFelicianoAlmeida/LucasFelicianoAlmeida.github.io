@@ -1,0 +1,83 @@
+*{
+    font-family: 'Poppins' ,sans-serif;
+
+}
+@media (max-width: 767px) {
+    .header-img{
+        height: 200px!important;
+    }
+}
+.header-section
+{
+    position: relative;
+    height: 100vh;
+}
+
+.wave-container{
+    bottom: 0;
+
+}
+
+.img-wave{
+    background-image: url('https://user-images.githubusercontent.com/54940494/257262892-6efffa6f-8e0c-44dd-8e0e-a67622e2111b.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}
+
+.img-stacks{
+    background-image: url('https://user-images.githubusercontent.com/54940494/257601932-14c2bbe8-b187-4a14-9ea0-73e82f537bdd.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    /* position: absolute;
+    bottom: 0; */
+}
+
+@keyframes updown {
+    from {
+        transform: translateY(-35px);
+
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.mouse-container{
+    animation: updown 3s;
+    animation-iteration-count: infinite;
+    visibility: hidden;
+}
+
+.mouse-container , svg{
+    fill: white;
+    left: calc(50% - (50px /2));
+}
+
+/* .wave-container > img{
+    height: 224px;
+} */
+
+
+.about-section , .project-section, .contact-section{
+    min-height: 100vh;
+}
+
+.font-diferente
+{
+}
+
+.navbar{
+    transition: 1s all;
+}
+.navbar-brand{
+    font-family: 'Ms Madi', cursive;
+    font-size: 48px!important;
+    padding-bottom: 0!important;
+    padding-top: 0!important;
+    margin-right: 0!important;
+}
